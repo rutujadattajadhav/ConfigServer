@@ -3,8 +3,6 @@ spring:
     name: CONFIG-SERVER
   cloud:
     config:
-      requestReadTimeout: 5000
-      requestConnectTimeout: 5000
       server:
         git:
           timeout: 10
@@ -13,8 +11,7 @@ spring:
          # cloneOnStartShallow: true
           searchPaths: 'services/{application}'
           username: rutujadattajadhav@gmail.com
-          password: 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
-          period: 60
+          password: ThinkSmart@1234
           #default-label: "*"  # default Git branch
     #request-connect-timeout: 5000
     #request-read-timeout: 15000
@@ -43,4 +40,8 @@ management:
         include: "*"
 logging:
   level:
-    org.springframework.cloud.config.server: DEBUG
+    org:
+      springframework:
+        cloud:
+          config:
+            server: DEBUG
